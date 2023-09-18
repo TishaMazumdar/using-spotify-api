@@ -23,3 +23,6 @@ def get_token():
     json_result = json.loads(result.content)
     token = json_result["access_token"]
     return token
+
+def get_auth_header(token):
+    return {"Authorization": "Bearer " + token}
