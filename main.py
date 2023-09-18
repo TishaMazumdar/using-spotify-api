@@ -41,3 +41,16 @@ def search_for_artist(token, artist_name):
         return None
     
     return json_result[0]
+
+def get_songs_by_artist(token, artist_id):
+    url = f"https://api.spotify.com/v1/artists/{artist_id}/top-tracks?country=IN"
+    headers = get_auth_header(token)
+    result = get(url, headers = headers)
+    json_result = json.loads(result.content)["tracks"]
+    return json_result
+
+
+token = get_token()
+result = search_for_artist(token, "Camila Cabello")
+artist_id = result["id"]
+songs = get_songs_by_artist(token, artist_id)
