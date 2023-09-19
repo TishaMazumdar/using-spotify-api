@@ -58,4 +58,4 @@ python main.py
 
 ## Contributing
 
-Feel free to fork this repository, make your changes, and submit a pull request. We're open to your suggestions!
+Feel free to fork this repository, make your changes, and submit a pull request. I'm open to your suggestions!
